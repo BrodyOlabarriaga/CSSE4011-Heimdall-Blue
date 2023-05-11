@@ -1,0 +1,13 @@
+
+C_INCLUDES = \
+-Ixdctools_3_62_00_08_core\packages \
+-Ixdctools_3_62_00_08_core\packages\xdc \
+
+C_LIBS = \
+-Lxdctools_3_62_00_08_core\packages\ -lxdc
+
+
+all:
+	gcc $(C_INCLUDES) -c -o main.o main.c $(C_LIBS)
+	gcc $(C_INCLUDES) -o sneaky.bin main.o $(C_LIBS)
+
